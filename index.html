@@ -48,92 +48,10 @@
         </div>
 
         <div id="content-box" class="hidden">
-            <span id="close-done">&times;</span>
+            <span id="close-content">&times;</span>
             <div class="content-info">
             </div>
         </div>
-
-        <script>
-            document.getElementById('bitcoin').addEventListener('click', () => {
-                document.querySelector('.content-info').innerHTML = `
-                    <h2>Bitcoin</h2>
-                    <h3>Ticker Symbol</h3>
-                    <p>BTC</p>
-                    <h3>Founding Date</h3>
-                    <p>January 3, 2009</p>
-                    <h3>Founder</h3>
-                    <p>Satoshi Nakamoto</p>
-                    <h3>Current Price:</h3>
-                    <p>~$94,500 USD</p>
-                    <h3>Market Capitalization:</h3>
-                    <p>~$1.88 trillion USD</p>
-                    <h3>Benefits:</h3>
-                    <p>Decentralization, limited supply, global accessibility, security, potential for high returns</p>
-                    <h3>Drawbacks</h3>
-                    <p>Price volatility, regulatory uncertainty, scalability issues, environmental concerns, security risks</p>
-                `;
-            });
-
-            document.getElementById('ether').addEventListener('click', () => {
-                document.querySelector('.content-info').innerHTML = `
-                    <h2>Ethereum</h2>
-                    <h3>Ticker Symbol</h3>
-                    <p>ETH</p>
-                    <h3>Founding Date</h3>
-                    <p>July 30, 2015</p>
-                    <h3>Founder</h3>
-                    <p>Vitalik Buterin</p>
-                    <h3>Current Price:</h3>
-                    <p>~$1,798 USD</p>
-                    <h3>Market Capitlization:</h3>
-                    <p>~$221 billion USD</p>
-                    <h3>Benefits:</h3>
-                    <p>Smart contract functionality, decentralized applications (dApps), active developer community, energy-efficient proof-of-stake consensus, broad adoption in DeFi and NFTs</p>
-                    <h3>Drawbacks</h3>
-                    <p>Scalability challenges, high gas fees, regulatory uncertainty, competition from other smart contract platforms</p>
-                `;
-            });
-
-            document.getElementById('tether').addEventListener('click', () => {
-                document.querySelector('.content-info').innerHTML = `
-                    <h2>Tether</h2>
-                    <h3>Ticker Symbol</h3>
-                    <p>USDT</p>
-                    <h3>Founding Date</h3>
-                    <p>October 6, 2014</p>
-                    <h3>Founder</h3>
-                    <p>Brock Pierce, Reeve Collins, and Craig Sellars</p>
-                    <h3>Current Price:</h3>
-                    <p>~$1.00 USD</p>
-                    <h3>Market Capitlization:</h3>
-                    <p>~$149 billion USD</p>
-                    <h3>Benefits:</h3>
-                    <p>Price stability, widely used for trading and liquidity, fast transactions, bridges traditional finance and crypto</p>
-                    <h3>Drawbacks</h3>
-                    <p>Centralized control, reserve transparency concerns, regulatory scrutiny, potential depegging risks</p>
-                `;
-            });
-
-            document.getElementById('ripple').addEventListener('click', () => {
-                document.querySelector('.content-info').innerHTML = `
-                    <h2>XRP</h2>
-                    <h3>Ticker Symbol</h3>
-                    <p>XRP</p>
-                    <h3>Founding Date</h3>
-                    <p>2012</p>
-                    <h3>Founder</h3>
-                    <p>Jed McCaleb, Arthur Britto, and David Schwartz</p>
-                    <h3>Current Price:</h3>
-                    <p>~$2.13 USD</p>
-                    <h3>Market Capitlization:</h3>
-                    <p>~$127.6 billion USD</p>
-                    <h3>Benefits:</h3>
-                    <p>Fast and low-cost cross-border transactions, scalability, financial institution partnerships, energy-efficient consensus</p>
-                    <h3>Drawbacks</h3>
-                    <p>Ongoing legal issues, centralized token distribution, competition in payments sector, regulatory uncertainty</p>
-                `;
-            });
-        </script>
     </main>
 
     <footer>
@@ -157,6 +75,101 @@
             <a href="https://www.okx.com/en-us">OKX</a>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('bitcoin').addEventListener('click', () => {
+            document.getElementById('content-box').classList.remove('hidden');
+            document.querySelector('.content-info').innerHTML = `
+                <h2>Bitcoin</h2>
+                <h3>Ticker Symbol</h3>
+                <p>BTC</p>
+                <h3>Founding Date</h3>
+                <p>January 3, 2009</p>
+                <h3>Founder</h3>
+                <p>Satoshi Nakamoto</p>
+                <h3>Current Price:</h3>
+                <p>~$94,500 USD</p>
+                <h3>Market Capitalization:</h3>
+                <p>~$1.88 trillion USD</p>
+                <h3>Benefits:</h3>
+                <p>Decentralization, limited supply, global accessibility, security, potential for high returns</p>
+                <h3>Drawbacks</h3>
+                <p>Price volatility, regulatory uncertainty, scalability issues, environmental concerns, security risks</p>
+            `;
+            document.querySelector('.background-boxes').classList.add('hidden');
+        });
+
+        document.getElementById('ether').addEventListener('click', () => {
+            document.getElementById('content-box').classList.remove('hidden');
+            document.querySelector('.content-info').innerHTML = `
+                <h2>Ethereum</h2>
+                <h3>Ticker Symbol</h3>
+                <p>ETH</p>
+                <h3>Founding Date</h3>
+                <p>July 30, 2015</p>
+                <h3>Founder</h3>
+                <p>Vitalik Buterin</p>
+                <h3>Current Price:</h3>
+                <p>~$1,798 USD</p>
+                <h3>Market Capitlization:</h3>
+                <p>~$221 billion USD</p>
+                <h3>Benefits:</h3>
+                <p>Smart contract functionality, decentralized applications (dApps), active developer community, energy-efficient proof-of-stake consensus, broad adoption in DeFi and NFTs</p>
+                <h3>Drawbacks</h3>
+                <p>Scalability challenges, high gas fees, regulatory uncertainty, competition from other smart contract platforms</p>
+            `;
+            document.querySelector('.background-boxes').classList.add('hidden');
+        });
+
+        document.getElementById('tether').addEventListener('click', () => {
+            document.getElementById('content-box').classList.remove('hidden');
+            document.querySelector('.content-info').innerHTML = `
+                <h2>Tether</h2>
+                <h3>Ticker Symbol</h3>
+                <p>USDT</p>
+                <h3>Founding Date</h3>
+                <p>October 6, 2014</p>
+                <h3>Founder</h3>
+                <p>Brock Pierce, Reeve Collins, and Craig Sellars</p>
+                <h3>Current Price:</h3>
+                <p>~$1.00 USD</p>
+                <h3>Market Capitlization:</h3>
+                <p>~$149 billion USD</p>
+                <h3>Benefits:</h3>
+                <p>Price stability, widely used for trading and liquidity, fast transactions, bridges traditional finance and crypto</p>
+                <h3>Drawbacks</h3>
+                <p>Centralized control, reserve transparency concerns, regulatory scrutiny, potential depegging risks</p>
+            `;
+            document.querySelector('.background-boxes').classList.add('hidden');
+        });
+
+        document.getElementById('ripple').addEventListener('click', () => {
+            document.getElementById('content-box').classList.remove('hidden');
+            document.querySelector('.content-info').innerHTML = `
+                <h2>XRP</h2>
+                <h3>Ticker Symbol</h3>
+                <p>XRP</p>
+                <h3>Founding Date</h3>
+                <p>2012</p>
+                <h3>Founder</h3>
+                <p>Jed McCaleb, Arthur Britto, and David Schwartz</p>
+                <h3>Current Price:</h3>
+                <p>~$2.13 USD</p>
+                <h3>Market Capitlization:</h3>
+                <p>~$127.6 billion USD</p>
+                <h3>Benefits:</h3>
+                <p>Fast and low-cost cross-border transactions, scalability, financial institution partnerships, energy-efficient consensus</p>
+                <h3>Drawbacks</h3>
+                <p>Ongoing legal issues, centralized token distribution, competition in payments sector, regulatory uncertainty</p>
+            `;
+            document.querySelector('.background-boxes').classList.add('hidden');
+        });
+
+        document.getElementById('close-content').addEventListener('click', () => {
+            document.getElementById('content-box').classList.add('hidden');
+            document.querySelector('.background-boxes').classList.remove('hidden');
+        });
+    </script>
 </body>
 
 </html>
