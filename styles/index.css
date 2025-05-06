@@ -137,4 +137,9 @@ header a:hover {
     .big-box {
         width: 80vw;
     }
+
+    footer {
+        flex-direction: column;
+        margin: 0 auto 30px;
+    }
 }
