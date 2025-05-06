@@ -11,6 +11,152 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Crypto World</title>
 </head>
+
+<body>
+    <header>
+        <div class="head-item">
+            <h1>Crypto World</h1>
+        </div>
+        <div class="head-item">
+            <p>More Projects</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="background-boxes">
+            <div class="big-box" id="bitcoin">
+                <h2>Bitcoin</h2>
+                <p>BTC</p>
+            </div>
+
+            <div class="big-box" id="ether">
+                <h2>Ethereum</h2>
+                <p>ETH</p>
+            </div>
+
+            <div class="big-box" id="tether">
+                <h2>Tether</h2>
+                <p>USDT</p>
+            </div>
+
+            <div class="big-box" id="ripple">
+                <h2>XRP</h2>
+                <p>XRP</p>
+            </div>
+        </div>
+
+        <div id="content-box" class="hidden">
+            <span id="close-done">&times;</span>
+            <div class="content-info">
+            </div>
+        </div>
+
+        <script>
+            document.getElementById('bitcoin').addEventListener('click', () => {
+                document.querySelector('.content-info').innerHTML = `
+                    <h2>Bitcoin</h2>
+                    <h3>Ticker Symbol</h3>
+                    <p>BTC</p>
+                    <h3>Founding Date</h3>
+                    <p>January 3, 2009</p>
+                    <h3>Founder</h3>
+                    <p>Satoshi Nakamoto</p>
+                    <h3>Current Price:</h3>
+                    <p>~$94,500 USD</p>
+                    <h3>Market Capitalization:</h3>
+                    <p>~$1.88 trillion USD</p>
+                    <h3>Benefits:</h3>
+                    <p>Decentralization, limited supply, global accessibility, security, potential for high returns</p>
+                    <h3>Drawbacks</h3>
+                    <p>Price volatility, regulatory uncertainty, scalability issues, environmental concerns, security risks</p>
+                `;
+            });
+
+            document.getElementById('ether').addEventListener('click', () => {
+                document.querySelector('.content-info').innerHTML = `
+                    <h2>Ethereum</h2>
+                    <h3>Ticker Symbol</h3>
+                    <p>ETH</p>
+                    <h3>Founding Date</h3>
+                    <p>July 30, 2015</p>
+                    <h3>Founder</h3>
+                    <p>Vitalik Buterin</p>
+                    <h3>Current Price:</h3>
+                    <p>~$1,798 USD</p>
+                    <h3>Market Capitlization:</h3>
+                    <p>~$221 billion USD</p>
+                    <h3>Benefits:</h3>
+                    <p>Smart contract functionality, decentralized applications (dApps), active developer community, energy-efficient proof-of-stake consensus, broad adoption in DeFi and NFTs</p>
+                    <h3>Drawbacks</h3>
+                    <p>Scalability challenges, high gas fees, regulatory uncertainty, competition from other smart contract platforms</p>
+                `;
+            });
+
+            document.getElementById('tether').addEventListener('click', () => {
+                document.querySelector('.content-info').innerHTML = `
+                    <h2>Tether</h2>
+                    <h3>Ticker Symbol</h3>
+                    <p>USDT</p>
+                    <h3>Founding Date</h3>
+                    <p>October 6, 2014</p>
+                    <h3>Founder</h3>
+                    <p>Brock Pierce, Reeve Collins, and Craig Sellars</p>
+                    <h3>Current Price:</h3>
+                    <p>~$1.00 USD</p>
+                    <h3>Market Capitlization:</h3>
+                    <p>~$149 billion USD</p>
+                    <h3>Benefits:</h3>
+                    <p>Price stability, widely used for trading and liquidity, fast transactions, bridges traditional finance and crypto</p>
+                    <h3>Drawbacks</h3>
+                    <p>Centralized control, reserve transparency concerns, regulatory scrutiny, potential depegging risks</p>
+                `;
+            });
+
+            document.getElementById('ripple').addEventListener('click', () => {
+                document.querySelector('.content-info').innerHTML = `
+                    <h2>XRP</h2>
+                    <h3>Ticker Symbol</h3>
+                    <p>XRP</p>
+                    <h3>Founding Date</h3>
+                    <p>2012</p>
+                    <h3>Founder</h3>
+                    <p>Jed McCaleb, Arthur Britto, and David Schwartz</p>
+                    <h3>Current Price:</h3>
+                    <p>~$2.13 USD</p>
+                    <h3>Market Capitlization:</h3>
+                    <p>~$127.6 billion USD</p>
+                    <h3>Benefits:</h3>
+                    <p>Fast and low-cost cross-border transactions, scalability, financial institution partnerships, energy-efficient consensus</p>
+                    <h3>Drawbacks</h3>
+                    <p>Ongoing legal issues, centralized token distribution, competition in payments sector, regulatory uncertainty</p>
+                `;
+            });
+        </script>
+    </main>
+
+    <footer>
+        <div class="footer-column">
+            <h3>More Cryptocurrencies</h3>
+            <a href="https://solana.com/">Solana</a>
+            <a href="https://www.usdc.com/">USD Coin</a>
+            <a href="https://dogecoin.com/">Dogecoin</a>
+            <a href="https://cardano.org/">Cardano</a>
+            <a href="https://trondao.org/">Tron</a>
+            <a href="https://www.wbtc.network/">Wrapped Bitcoin</a>
+            <a href="https://sui.io/">Sui</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>More Exchanges</h3>
+            <a href="https://www.binance.com/en">Binance</a>
+            <a href="https://www.bybit.com/en/">Bybit</a>
+            <a href="https://www.coinbase.com/exchange">Coinbase Exchange</a>
+            <a href="https://upbit.com/home">Upbit</a>
+            <a href="https://www.okx.com/en-us">OKX</a>
+        </div>
+    </footer>
+</body>
 
 </html>
