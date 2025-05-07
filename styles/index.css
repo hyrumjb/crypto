@@ -1,67 +1,72 @@
+:root {
+    --font-family: "Lato", Arial, Helvetica, sans-serif;
+    --bg-dark: black;
+    --text-dark: white;
+    --bg-light: white;
+    --text-light: black;
+    --color-accent: rgb(150, 150, 150);
+    --border-dark: white;
+    --border-light: black;
+    --shadow-dark: 0 1px 5px rgba(255, 255, 255, 0.1);
+    --shadow-light: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
 * {
     box-sizing: border-box;
-    /* border: 1px solid blue; */
     margin: 0;
     padding: 0;
-    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-family: var(--font-family);
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 110vh;
-    background-color: black;
-    color: white;
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
     transition: background-color 0.3s, color 0.3s;
 }
 
 body.light {
-    color: black;
-    background-color: white;
-    transition: background-color 0.3s, color 0.3s;
+    color: var(--text-light);
+    background-color: var(--bg-light);
 }
 
-body.light #content-box {
-    border-color: black;
-}
-
-
-body.light footer a:hover {
-    color: black;
-}
-
-
+body.light #content-box,
 body.light .big-box {
-    border-color: black;
+    border-color: var(--border-light);
+}
+
+body.light footer a:hover,
+body.light header a,
+body.light header a:visited {
+    color: var(--text-light);
 }
 
 body.light svg {
-    fill: black;
+    fill: var(--text-light);
 }
 
-body.light header a {
-    color: black;
+body.light .big-box:hover,
+.big-box:hover {
+    cursor: pointer;
+    border: 5px solid var(--color-accent);
 }
 
-body.light header a:visited {
-    color: black;
-}
-
-body.light .big-box:hover {
-    border: 5px solid rgb(150, 150, 150);
-}
-
-body.light header a:hover {
-    color: rgb(150, 150, 150)
+body.light header a:hover,
+#close-content:hover,
+.big-box:hover * {
+    cursor: pointer;
+    color: var(--color-accent);
 }
 
 body.light svg:hover {
-    fill: rgb(150, 150, 150);
+    fill: var(--color-accent);
 }
 
 body.light header {
-    background-color: white;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--bg-light);
+    box-shadow: var(--shadow-light);
 }
 
 header {
@@ -71,9 +76,9 @@ header {
     height: 10vh;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: var(--bg-dark);
     z-index: 1000;
-    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-dark);
 }
 
 .hidden {
@@ -81,11 +86,11 @@ header {
 }
 
 svg {
-    fill: white;
+    fill: var(--text-dark);
 }
 
 svg:hover {
-    fill: rgb(150, 150, 150);
+    fill: var(--color-accent);
     cursor: pointer;
 }
 
@@ -114,22 +119,13 @@ main {
 }
 
 .big-box {
-    border: 5px solid white;
+    border: 5px solid var(--border-dark);
     border-radius: 10px;
     display: flex;
     width: 38vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.big-box:hover {
-    cursor: pointer;
-    border: 5px solid rgb(150, 150, 150);
-}
-
-.big-box:hover * {
-    color: rgb(150, 150, 150);
 }
 
 footer {
@@ -146,7 +142,7 @@ footer {
 }
 
 footer a {
-    color: rgb(150, 150, 150);
+    color: var(--color-accent);
 }
 
 a {
@@ -154,15 +150,15 @@ a {
 }
 
 footer a:hover {
-    color: white;
+    color: var(--text-dark);
 }
 
 header a {
-    color: white;
+    color: var(--text-dark);
 }
 
 header a:hover {
-    color:rgb(150, 150, 150);
+    color: var(--color-accent);
 }
 
 #content-box {
@@ -170,7 +166,7 @@ header a:hover {
     flex-direction: column;
     flex: 1;
     width: 100%;
-    border: 5px solid white;
+    border: 5px solid var(--border-dark);
     border-radius: 10px;
 }
 
@@ -192,11 +188,6 @@ header a:hover {
     text-align: right;
     font-size: 40px;
     padding-right: 15px;
-}
-
-#close-content:hover {
-    cursor: pointer;
-    color: rgb(150, 150, 150);
 }
 
 @media (max-width: 800px) {
